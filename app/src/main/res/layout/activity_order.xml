@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_order"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#795547"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_title_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/toolbar_title_text_order"
+            android:textColor="#fffbfc"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/americanoBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:text="Americano"
+        android:textColor="#5d4038"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cappuccinoBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cappuccinoBtn"
+        app:strokeColor="@color/black"
+        app:strokeWidth="40dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cappuccinoBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="46dp"
+        android:text="Cappuccino"
+        android:textColor="#5d4038"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/black"
+        app:strokeWidth="40dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/latteBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Latte"
+        android:textColor="#5d4038"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/americanoBtn"
+        app:layout_constraintTop_toBottomOf="@+id/americanoBtn"
+        app:strokeColor="@color/black"
+        app:strokeWidth="40dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/macchiatoBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Macchiato"
+        android:textColor="#5d4038"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/cappuccinoBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cappuccinoBtn"
+        app:strokeColor="@color/black"
+        app:strokeWidth="40dp" />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginBottom="161dp"
+        app:layout_constraintBottom_toTopOf="@+id/continueBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/americanoBtn" />
+
+    <Button
+        android:id="@+id/continueBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:text="CONTINUE"
+        android:textColor="#fffbfc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
